@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Loving Memory of Grandma</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #444;
+        }
+
+        header {
+            background: #f4a261;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .hero .quote {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #6a0572;
+        }
+
+        .tribute, .gallery, .memory-sharing {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fefae0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #264653;
+            border-bottom: 2px solid #2a9d8f;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .gallery .image-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 200px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .memory-sharing textarea {
+            width: 100%;
+            height: 80px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #2a9d8f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background: #21867a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #264653;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>In Loving Memory of My Grandmother</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="IMG_20250103_085351.jpg" alt="Grandmother's Photo">
+            <p class="quote">"A grandmother is a little bit parent, a little bit teacher, and a little bit best friend."</p>
+        </section>
+        <section class="tribute">
+            <h2>Her Life and Legacy</h2>
+            <p>
+                My grandmother was a remarkable woman who touched the hearts of everyone she met. 
+                She taught us kindness, resilience, and the importance of family. Her warmth and wisdom 
+                will forever be cherished in our memories.
+            </p>
+        </section>
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <div class="image-container">
+                <img src="" alt="Grandma in the garden">
+                <img src="photo2.jpg" alt="Family gathering">
+                <img src="photo3.jpg" alt="Grandma smiling">
+            </div>
+        </section>
+        <section class="memory-sharing">
+            <h2>Share Your Memories</h2>
+            <textarea id="memory-input" placeholder="Write a memory of grandma..."></textarea>
+            <button onclick="addMemory()">Submit</button>
+            <div id="memory-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Tribute to Grandma</p>
+    </footer>
+    <script>
+        function addMemory() {
+            const memoryInput = document.getElementById("memory-input");
+            const memoryList = document.getElementById("memory-list");
+
+            if (memoryInput.value.trim() !== "") {
+                const newMemory = document.createElement("p");
+                newMemory.textContent = memoryInput.value;
+                memoryList.appendChild(newMemory);
+                memoryInput.value = "";
+            } else {
+                alert("Please write a memory before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>
